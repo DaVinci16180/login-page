@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="logo">
+                <img src="resources/logo.svg" alt="">
+            </div>
+            <div class="box">
+                <div class="login-header">
+                    <div class="title">
+                        <img src="resources/log-in.svg" alt="log-in">
+                        <h1>Faça seu login</h1>
+                    </div>
+                    <p>Entre com suas informações de cadastro.</p>
+                </div>
+    
+                <form action="">
+                    <div class="form-row email">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                    </div>
+    
+                    <div class="form-row">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                        <button type="button" class="hide-password"></button>
+                    </div>
+    
+                    <div class="form-row">
+                        <div class="flex-row">
+                            <label for="remember" class="checkbox">
+                                Lembre-me
+                                <input type="checkbox" name="remember" id="remember">
+                                <span class="checkmark"></span>
+                                <img src="resources/check.svg" alt="">
+                            </label>
+                            <a href="">Esqueci minha senha</a>
+                        </div>
+                    </div>
+    
+                    <div class="form-row">
+                        <button type="submit">ENTRAR</button>
+                    </div>
+
+                    <div class="flex-center yellow">
+                        <span>
+                            Não tem uma conta? <a href="">Registre-se</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="image"></div>
+    </div>
+</body>
+</html>

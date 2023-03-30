@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --text-base: #afb6c2;
+    --text-title: #d4ccb6;
+    --background: #191816;
+    --form-background: #24221f;
+    --primary-color: #ffc632;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-base);
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+input {
+    background-color: transparent;
+    color: var(--text-base);
+    outline: none;
+    border: 1px solid var(--text-base);
+    border-radius: 0.2rem;
+    padding: 0.6rem 1rem;
+    padding-left: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+input:focus {
+    outline: 2px solid var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+input[type="email"] {
+    background: url("resources/mail.svg") no-repeat scroll 0.6rem 0.6rem;
+}
+
+input[type="email"]:focus {
+    background: url("resources/mail-focus.svg") no-repeat scroll 0.6rem 0.6rem;
+}
+
+input[type="password"] {
+    background: url("resources/lock.svg") no-repeat scroll 0.6rem 0.6rem;
+}
+
+input[type="password"]:focus {
+    background: url("resources/lock-focus.svg") no-repeat scroll 0.6rem 0.6rem;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--form-background);
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+a {
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1 {
+    margin: 0 0.5rem;
+    color: var(--text-title);
+    font-weight: 500;
+    font-size: 1.5rem;
+    display: inline;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+input[type="checkbox"] ~ img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: url("");
+}
+
+input[type="checkbox"]:checked ~ img {
+    content: url("resources/check.svg");
+}
+
+.hide-password {
+    background: url("resources/eye.svg") no-repeat scroll 0.3rem 0.3rem;
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem;
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    padding-left: 1.5rem;
+    user-select: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 1.1rem;
+    width: 1.1rem;
+    background-color: transparent;
+    border: 1px solid var(--text-base);
+    border-radius: 0.2rem;
+}
+
+input[type="checkbox"]:checked ~ .checkmark {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.content{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header p {
+    margin: 0;
+}
+
+.logo{
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+}
+
+.box{
+    background-color: var(--form-background);
+    position: absolute;
+    height: min-content;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 3rem 5rem;
+    border-radius: 0.3rem;
+}
+
+.form-row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.image {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("resources/side-image.jpg");
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.yellow {
+    color: var(--primary-color);
+}
+
+.title {
+    height: max-content;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1150px) {
+    .image {
+      display: none;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo{
+        position: static;
+        padding: 2rem 1.5rem;
+        align-self: start;
+    }
+
+    .box {
+        transform: initial;
+        background-color: transparent;
+        position: static;
+        width: calc(100% - 3rem);
+        padding: 0;
+    }
+}
